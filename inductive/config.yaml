@@ -1,0 +1,41 @@
+data_file: ../data/reddit/reddit.npz #mag_coarse.npz #reddit.npz  # Path to the .npz data file
+split_seed: 0               # Seed for splitting the dataset into train/val/test
+init_seed:  0              # Seed for initial the training setting
+ntrain_div_classes: 50      # Number of training nodes divided by number of classes; value set to [20,50,100]
+attr_normalization: None    # Attribute normalization. Not used in the paper
+
+alpha: 0.15                 # PPR teleport probability 
+eps: 1e-4                   # Stopping threshold for ACL's ApproximatePR
+topk: 0                     # Number of PPR neighbors for each node
+ppr_normalization: 'sym'    # Adjacency matrix normalization for weighting neighbors
+
+hidden_size: 32             # Size of the MLP's hidden layer
+nlayers: 2                  # Number of MLP layers
+weight_decay: 1e-4          # Weight decay used for training the MLP
+dropout: 0.1                # Dropout used for training
+
+lr: 5e-3                    # Learning rate
+max_epochs: 800             # Maximum number of epochs (exact number if no early stopping)
+batch_size: 4200            # Batch size for training
+batch_mult_val: 4           # Multiplier for validation batch size
+device: 0                   # GPU Device ID
+
+
+eval_step: 20               # Accuracy is evaluated after every this number of steps
+run_val: False              # Evaluate accuracy on validation set during training
+
+early_stop: False           # Use early stopping
+patience: 50                # Patience for early stopping
+
+nprop_inference: 2          # Number of propagation steps during inference
+inf_fraction: 1.0           # Fraction of nodes for which local predictions are computed during inference
+
+issue_type: 'tinl'          # Whether the training set is quantity-balanced; value set to ['tinl','qinl']
+
+
+base_w:  0.75                  # the base  value for ReNode re-weighting; value set to [0.25,0.5,0.75,1]
+scale_w: 0.5               # the scale value for ReNode re-weighting; value set to [1.5 ,1  ,0.5 ,0]  
+
+
+
+

@@ -1,7 +1,7 @@
 # Topology-Imbalance Learning for Semi-Supervised Node Classification
 
 ## Introduction
-Code for NeurIPS 2021 paper "Topology-Imbalance Learning for Semi-Supervised Node Classification"
+Code for NeurIPS 2021 paper "[Topology-Imbalance Learning for Semi-Supervised Node Classification](https://arxiv.org/abs/2110.04099)"
 
 ![Overview Figure](plot/intro.jpg)
 This work investigates the **topology-imbalance** problem of node representation learning on graph-structured data. Unlike the "quantity-imbalance" problem, the topology imbalance is caused by the topological properties of the labeled nodes, i.e., the locations of the labeled nodes on the graph can influence how information is spread over the entire graph.
